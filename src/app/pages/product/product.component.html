@@ -1,21 +1,25 @@
 <div class="form-horizontal">
+
+
   <div class="form-group">
     <span>Categoria</span>
-    <input type="text" />
+    <input type="text" [(value)]="model.categoria" />
   </div>
   <div class="form-group">
     <span>Cod</span>
-    <input type="text" />
+    <input type="text" [(value)]="model.cod" />
   </div>
   <div class="form-group">
     <span>Titulo</span>
-    <input type="text" />
+    <input type="text" [(value)]="model.titulo" />
   </div>
   <div class="form-group">
     <span>Url</span>
-    <input type="text" />
+    <input type="text" [(value)]="model.url" />
   </div>
 
-  <input type="button" name="Guardar" title="Guardar"/>
+  <div (click)="save_product()">Guardar</div>
+
+
 
 </div>
