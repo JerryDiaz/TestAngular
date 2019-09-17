@@ -8,6 +8,7 @@ import { resolve } from 'url';
 })
 export class ProductosService {
 
+  registro = false;
   cargando = true;
   productos: Producto[] = [];
   ProductosFiltrado: Producto[] = [];
@@ -49,6 +50,10 @@ export class ProductosService {
       this.filtrarProductos(termino);
     }  
 
+  }
+
+  insert(item) {
+    return this.http.post('https://angular-html-8ab02.firebaseio.com/productos_idx', { data: [item] });
   }
 
   private filtrarProductos( termino: string ){
